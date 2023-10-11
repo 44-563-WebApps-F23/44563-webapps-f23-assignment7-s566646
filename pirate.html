@@ -1,76 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>Pirate search</title>
-      <h1>
-       Find the treasure by Srilatha
-       </h1>
-       <meta charset="utf-8">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
-       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
-     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<html> 
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" 
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+     <Title>Pirates Page</Title>
+     <style>
+        .imageStyle{width: 200px;height:200px}
+     </style>
     </head>
     <body>
-        <p>
-            Click on the locations to search for treasure, beware the traps
-            
-        </p>
+        <div class= "container-fluid text-center">
+        <h2 class="text-warning ">Find the treasure by Srilatha</h2><br>
+        <p class="text-primary  ">Click on the locations to search for treasure, beware the traps</p>
+        <p class="text-Success "id="locations">Number of locations checked is zero</p>
+        <p  class="text-danger"id="penalty">Penalty is zero.</p>
+        <button id="helpButton" onclick="help()">Click for help</button>
+        <div class="fst-normal mx-3 my-3 text-warning" id="help">Help report</div>
+        </div>
+        <div class="container">
+            <h2 class="text-center">Treasure Hunt Game</h2>
+            <div id="img-container">
+            <div class="row">
+                <div class="col-sm-2 img-fluid ">
+                <img id=image0 src="map.png" alt="Location" class="imageStyle" onclick="check(0)">
+            </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image01 src="map.png" alt="Location" class="imageStyle" onclick="check(1)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                    <img id=image02 src="map.png" alt="Location" class="imageStyle" onclick="check(2)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image03 src="map.png" alt="Location" class="imageStyle" onclick="check(3)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image04 src="map.png" alt="Location" class="imageStyle" onclick="check(4)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image05  src="map.png" alt="Location" class="imageStyle" onclick="check(5)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image06 src="map.png" alt="Location" class="imageStyle" onclick="check(6)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image07 src="map.png" alt="Location" class="imageStyle" onclick="check(7)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image08 src="map.png" alt="Location" class="imageStyle" onclick="check(8)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image09 src="map.png" alt="Location" class="imageStyle" onclick="check(9)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 img-fluid ">
+                  <img id=image10 src="map.png" alt="Location" class="imageStyle" onclick="check(10)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image11 src="map.png" alt="Location" class="imageStyle" onclick="check(11)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                    <img id=image12 src="map.png" alt="Location" class="imageStyle"  onclick="check(12)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image13 src="map.png" alt="Location" class="imageStyle" onclick="check(13)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image14 src="map.png" alt="Location" class="imageStyle" onclick="check(14)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image15 src="map.png" alt="Location" class="imageStyle" onclick="check(15)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image16 src="map.png" alt="Location" class="imageStyle" onclick="check(16)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                    <img id=image17 src="map.png" alt="Location" class="imageStyle" onclick="check(17)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image18 src="map.png" alt="Location" class="imageStyle" onclick="check(18)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image19 src="map.png" alt="Location" class="imageStyle" onclick="check(19)">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image20 src="map.png" alt="Location" class="imageStyle" onclick="check(20)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image21 src="map.png" alt="Location" class="imageStyle" onclick="check(21)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                    <img id=image22 src="map.png" alt="Location" class="imageStyle" onclick="check(22)">
+                </div>
+                <div class="col-sm-2 img-fluid ">
+                     <img id=image23 src="map.png" alt="Location" class="imageStyle" onclick="check(23)">
+                </div>
+                <div class="col-sm-2 img-fluid "> 
+                    <img id=image24 src="map.png" alt="Location" class="imageStyle" onclick="check(24)">
+                </div>
+            </div>
+        </div>
 
-        <p id="Locations">Number of Locations checked is zero.</p>
-        <p id="penalty">Penalty is zero.</p>
-        <p>Click for help. </p>
-        <p id="help">Help report.</p>
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-2" ><img src="Location.jpg" onclick="check(0)" width="100" height="100" id="id0"></div>
-            <div class="col-sm-2" ><img src="Location.jpg" onclick="check(1)" width="100" height="100" id="id1"></div>
-            <div class="col-sm-2" ><img src="Location.jpg" onclick="check(2)" width="100" height="100" id="id2"></div>
-            <div class="col-sm-2" ><img src="Location.jpg" onclick="check(3)" width="100" height="100" id="id3"></div>
-            <div class="col-sm-2" ><img src="Location.jpg" onclick="check(4)" width="100" height="100" id="id4"></div>
-            
-        </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(0)" width="100" height="100" id="id0"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(1)" width="100" height="100" id="id1"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(2)" width="100" height="100" id="id2"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(3)" width="100" height="100" id="id3"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(4)" width="100" height="100" id="id4"></div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(0)" width="100" height="100" id="id0"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(1)" width="100" height="100" id="id1"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(2)" width="100" height="100" id="id2"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(3)" width="100" height="100" id="id3"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(4)" width="100" height="100" id="id4"></div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(0)" width="100" height="100" id="id0"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(1)" width="100" height="100" id="id1"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(2)" width="100" height="100" id="id2"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(3)" width="100" height="100" id="id3"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(4)" width="100" height="100" id="id4"></div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(0)" width="100" height="100" id="id0"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(1)" width="100" height="100" id="id1"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(2)" width="100" height="100" id="id2"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(3)" width="100" height="100" id="id3"></div>
-                <div class="col-sm-2" ><img src="Location.jpg" onclick="check(4)" width="100" height="100" id="id4"></div>
-            </div>
-        </div>
-        
-    </body>
+    <script>
+        let ids = [
+            "image0", "image01", "image02", "image03", "image04",
+            "image05", "image06", "image07", "image08", "image09",
+            "image10", "image11", "image12", "image13", "image14",
+            "image15", "image16", "image17", "image18", "image19",
+            "image20", "image21", "image22", "image23", "image24"
+        ];
+        let checkCount = 0;
+        let penalty = 0;
+        let lastCheck = 0;
+        let treasureLocation = 5;
+        let trapLocation = 18;
+        let gameOver = false;
+        function check(position) {
+            if (!gameOver)
+            { 
+                let imageId = ids[position];
+                let imageElement = document.getElementById(imageId);
+                if (position === treasureLocation) 
+                {
+                    imageElement.src = "treasure.jpg";
+                    gameOver = true;
+                    penalty -= 3;
+                
+                }
+                else if (position === trapLocation)
+                 {   
+
+                    imageElement.src = "trap.jpg";
+                    gameOver = true;
+                    penalty += 4;
+                 }
+                else
+                {
+                    imageElement.src = "PirateHat.png";
+                    penalty+=1;
+                }
+                checkCount++;
+                document.getElementById("locations").textContent = "Locations: " + position;
+                document.getElementById("penalty").textContent = "Penalty: " + penalty;
+                lastCheck = position;
+            }
+
+        }
+        function help() 
+        {
+            let treasureRow = Math.floor(treasureLocation / 5);
+            let treasureCol = treasureLocation % 5;
+            let lastLocationRow = Math.floor(lastCheck / 5);
+            let lastLocationCol = lastCheck % 5;
+            let rowDifference = Math.abs(treasureRow - lastLocationRow);
+            let colDifference = Math.abs(treasureCol - lastLocationCol);
+
+        if ((rowDifference === 1 && colDifference <= 1) || (colDifference === 1 && rowDifference <= 1)) {
+            document.getElementById("help").textContent = "Can smell it";
+        } else if (rowDifference + colDifference === 2) {
+            document.getElementById("help").textContent = "Close Matie";
+        } else {
+            document.getElementById("help").textContent = "Step Faster";
+        }
+        penalty += 2;
+        document.getElementById("penalty").textContent = "Penalty: " + penalty;
+    }
+    </script>
+</body>
 </html>
+
+    </body>
+    </html>
