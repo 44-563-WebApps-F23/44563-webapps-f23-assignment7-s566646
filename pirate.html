@@ -20,6 +20,7 @@
         <p  class="text-danger"id="penalty">Penalty is zero.</p>
         <button id="helpButton" onclick="help()">Click for help</button>
         <div class="fst-normal mx-3 my-3 text-warning" id="help">Help report</div>
+        <button id="newGameButton" onclick="startNewGame()">New Game</button><br>
         </div>
         <div class="container">
             <h2 class="text-center">Treasure Hunt Game</h2>
@@ -174,6 +175,15 @@
         penalty += 2;
         document.getElementById("penalty").textContent = "Penalty: " + penalty;
     }
+    function startNewGame() {
+            checkCount = 0;
+            penalty = 0
+            treasureLocation = Math.round(Math.random() * (24));
+            trapLocation = Math.round(Math.random() * (24));
+            document.getElementById("locations").innerHTML = `Number of locations checked is ${checkCount}`
+            document.getElementById("penalty").innerHTML = `Penalty is ${penalty}`
+
+        }
     </script>
 </body>
 </html>

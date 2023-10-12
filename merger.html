@@ -33,8 +33,6 @@
     <input type="text"id="textInput"><br><br>
     <button id="addFront" class="bg-info" onclick="addFront()">Add front</button><br><br>
     <button id="remove" class="bg-warning"onclick="remove()">Remove</button><br><br>
-		
-	
 	<p> Press the below button to create an new element of type div and then add it at the end the container.
 		</p>
 		<button  class="bg-success"onclick="makeNewDiv()">Add end</button><br><br>
@@ -47,14 +45,13 @@
 </body>
 <script>
 	function makeNewDiv(){
-		
             const inputValue = document.getElementById("textInput").value;
             const newElement = document.createElement("div");
             newElement.innerHTML = inputValue;
             newElement.className = "merger";
             document.querySelector(".flex-container").appendChild(newElement);
         };
-        
+
         function addFront() {
             const inputValue = document.getElementById("textInput").value;
             const newElement = document.createElement("div");
@@ -63,7 +60,6 @@
             const container = document.querySelector(".flex-container");
             container.insertBefore(newElement, container.firstChild);
         };
-
        function remove () {
             const mergerItems = document.getElementsByClassName("merger");
             const length = mergerItems.length;
